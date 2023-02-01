@@ -1,0 +1,49 @@
+/// Media Queries 
+/// @author MohammadRL
+/// 
+/// @param {size}
+///The Size Of Screen
+/// 
+@mixin media-queries ($size) {
+    @if $size ==mobile {
+        @media (max-width: 575px) {
+            @content;
+        }
+    }
+
+    @else if $size ==small {
+        @media (min-width:576px) and (max-width:767px) {
+            @content;
+        }
+    }
+
+    @else if $size ==medium {
+        @media (min-width:768px) and (max-width:991px) {
+            @content;
+        }
+    }
+
+    @else if $size ==large {
+        @media (min-width:992px) and (max-width:1199px) {
+            @content;
+        }
+    }
+
+    @else if $size ==extra-large {
+        @media (min-width:1200px) {
+            @content;
+        }
+    }
+}
+
+///Color Circles Position
+/// @author MohammadRL
+/// 
+/// @param {verticar_position,horizental_position,vertical_value,horizental_value}
+/// vertical And Horizental Position Of The Color Cirlce And Its Values
+/// 
+
+@mixin circlePosition($vertical_position, $horizental_position, $vertical_value, $horizental_value) {
+    #{$vertical_position}: $vertical_value;
+    #{$horizental_position}: $horizental_value;
+}
